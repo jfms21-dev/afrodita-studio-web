@@ -1,24 +1,127 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteLayout, WA_URL, MAPS_URL, seo } from "@/components/SiteLayout";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () =>
+    seo(
+      "Afrodita Studio — Manicura rusa y pedicura en Móstoles",
+      "Afrodita Studio, en C. de la Concordia 1, Móstoles. Manicura rusa, uñas con diseños y pedicura spa. 5,0★ con 26 reseñas en Google.",
+    ),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <section className="hero" id="inicio">
+        <div className="hero-text">
+          <span className="eyebrow">Studio · Móstoles</span>
+          <h1>Por fin un sitio <em>que cuida cada detalle.</em></h1>
+          <p>Manicura rusa, uñas con diseños y pedicura spa en la calle de la Concordia. Evel, Karen y el equipo trabajan con mimo, todo estéril y limpio.</p>
+          <div className="hero-ctas">
+            <Link to="/servicios" className="btn-outline">Descubre los servicios</Link>
+            <a href={WA_URL} className="btn-solid" target="_blank" rel="noopener">Pide tu cita →</a>
+          </div>
+          <a className="hero-rating" href={MAPS_URL} target="_blank" rel="noopener">
+            <span className="stars">★★★★★</span>
+            <span><strong>5,0</strong> · 26 reseñas en Google</span>
+          </a>
+        </div>
+        <div className="hero-img"><img src="/maps_06.jpg" alt="Salón de Afrodita Studio" style={{ objectPosition: "center 50%" }} /></div>
+      </section>
+
+      <section className="trust">
+        <div className="section-head">
+          <span className="eyebrow">✦ Nuestra filosofía</span>
+          <h2>Mimo <em>y profesionalidad</em></h2>
+          <p>Desde que entras el trato es increíble. Material estéril, un salón precioso y uñas que quedan justo como las querías.</p>
+        </div>
+        <div className="trust-grid">
+          <div className="trust-card"><span className="trust-ic">✦</span><h3>Manicura rusa</h3><p>Perfecta.</p></div>
+          <div className="trust-card"><span className="trust-ic">♥</span><h3>Pedicura spa</h3><p>Pies como nuevos.</p></div>
+          <div className="trust-card"><span className="trust-ic">❖</span><h3>Higiene</h3><p>Todo estéril.</p></div>
+          <div className="trust-card"><span className="trust-ic">★</span><h3>5,0 en Google</h3><p>26 reseñas.</p></div>
+        </div>
+      </section>
+
+      <section className="worlds">
+        <div className="section-head">
+          <span className="eyebrow">Lo que más nos piden</span>
+          <h2>Manos <em>y pies</em></h2>
+        </div>
+        <div className="worlds-grid">
+          <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><span className="script">Manos</span><h3>Manicura</h3><p>Rusa, semipermanente y diseños.</p><span className="world-link">Ver manos →</span></div></Link>
+          <Link to="/servicios" hash="pies" className="world-card"><img src="/maps_08.jpg" alt="Pedicura spa" /><div className="world-text"><span className="script">Pies</span><h3>Pedicura spa</h3><p>Pies cuidados y bonitos.</p><span className="world-link">Ver pies →</span></div></Link>
+        </div>
+      </section>
+
+      <section>
+        <div className="section-head">
+          <span className="eyebrow">Lo que ofrecemos</span>
+          <h2>Nuestras categorías</h2>
+          <p>Todo organizado por grupos, para que encuentres lo que buscas en segundos.</p>
+        </div>
+        <div className="cat-pills">
+          <Link to="/servicios" hash="manos" className="cat-pill">Manos</Link>
+          <Link to="/servicios" hash="pies" className="cat-pill">Pies</Link>
+        </div>
+      </section>
+
+      <section className="gallery-wrap" id="galeria">
+        <div className="section-head">
+          <span className="eyebrow">Nuestros trabajos</span>
+          <h2>Así es <em>Afrodita</em></h2>
+          <p>Te esperamos en la calle de la Concordia, 1, local K, en Móstoles.</p>
+        </div>
+        <div className="gallery">
+          <figure className="big"><img src="/maps_06.jpg" alt="Nuestro salón" loading="lazy" /></figure>
+          <figure><img src="/maps_09.jpg" alt="Almendra nude" loading="lazy" /></figure>
+          <figure><img src="/maps_07.jpg" alt="Rosa con lunares" loading="lazy" /></figure>
+          <figure><img src="/maps_01.jpg" alt="Lila en el estudio" loading="lazy" /></figure>
+          <figure><img src="/maps_08.jpg" alt="Puesto de manicura" loading="lazy" /></figure>
+        </div>
+        <div className="brands"><span>Afrodita</span><span>Móstoles</span><span>Studio</span></div>
+      </section>
+
+      <section className="reviews-wrap" id="opiniones">
+        <div className="section-head">
+          <span className="eyebrow">Reseñas Google</span>
+          <h2>Lo que dicen <em>nuestras clientas</em></h2>
+          <p>5,0 de 5 estrellas · 26 reseñas</p>
+        </div>
+        <div className="review-grid">
+          <div className="review-card"><div className="stars">★★★★★</div><p>"Por fin un sitio de uñas donde cuidan cada detalle. Desde que entras el trato es increíble y se nota muchísimo el mimo y la profesionalidad. Me han dejado las uñas preciosas."</p><cite>Mar C.</cite></div>
+          <div className="review-card"><div className="stars">★★★★★</div><p>"Son estupendas todas, en especial Evel: domina perfectamente la manicura rusa, la pedicura súper bien también. Lo recomiendo 100%."</p><cite>Priscila B.</cite></div>
+          <div className="review-card"><div className="stars">★★★★★</div><p>"Me recomendaron una pedicura spa y siento mis pies como nuevos. Las chicas súper amables, me sentí muy cómoda."</p><cite>Fabiola C.</cite></div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <span className="eyebrow">Reserva</span>
+        <h2>¿Te reservamos <em>cita?</em></h2>
+        <p>Escríbenos por WhatsApp y te buscamos hueco.</p>
+        <div className="cta-row">
+          <a href={WA_URL} className="btn-solid" target="_blank" rel="noopener">Pide tu cita →</a>
+          <a href={WA_URL} className="btn-outline" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        </div>
+      </section>
+
+      <section className="contact-section" id="contacto">
+        <div className="section-head">
+          <span className="eyebrow">Visítanos</span>
+          <h2>Dónde y cuándo encontrarnos</h2>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-info">
+            <div className="contact-block"><h3>Dirección</h3><p>C. de la Concordia, 1, local K<br />28931 Móstoles, Madrid</p></div>
+            <div className="contact-block"><h3>Teléfono / WhatsApp</h3><p><a href="tel:+34682297159">682 29 71 59</a></p></div>
+            <div className="contact-block"><h3>Horario</h3><ul className="hours-list"><li><span>Lunes a viernes</span><span>10:00–20:00</span></li><li><span>Sábado</span><span>10:00–14:00</span></li><li><span>Domingo</span><span>Cerrado</span></li></ul></div>
+          </div>
+          <div className="contact-map">
+            <iframe title="Mapa de Afrodita Studio" src="https://www.google.com/maps?q=Afrodita+Studio,+C.+de+la+Concordia+1,+M%C3%B3stoles&output=embed" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
