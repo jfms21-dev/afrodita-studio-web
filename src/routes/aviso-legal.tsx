@@ -13,9 +13,9 @@ export const Route = createFileRoute("/aviso-legal")({
         <h2>3. Condiciones de uso</h2>
         <p>El acceso a esta web es gratuito e implica la aceptación de este aviso legal. La persona usuaria se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena fe.</p>
         <h2>4. Propiedad intelectual</h2>
-        <p>Los textos, fotografías de trabajos, logotipos y diseño de esta web pertenecen a su titular o se usan con licencia (algunas imágenes ilustrativas proceden de Unsplash). Queda prohibida su reproducción sin autorización.</p>
+        <p>Los textos, fotografías de trabajos, logotipos y diseño de esta web pertenecen a su titular o se usan con autorización. Queda prohibida su reproducción sin autorización.</p>
         <h2>5. Enlaces externos</h2>
-        <p>La web contiene enlaces a servicios de terceros (Instagram, Facebook, WhatsApp, Google Maps y Reservio). El titular no se responsabiliza del contenido ni de las políticas de dichos sitios.</p>
+        <p>La web contiene enlaces a servicios de terceros (WhatsApp y Google Maps). El titular no se responsabiliza del contenido ni de las políticas de dichos sitios.</p>
         <h2>6. Legislación aplicable</h2>
         <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someterán a los juzgados y tribunales que correspondan conforme a derecho.</p>
       </main>

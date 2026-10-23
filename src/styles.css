@@ -1,6 +1,8 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource/cormorant-upright/latin-600.css";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
