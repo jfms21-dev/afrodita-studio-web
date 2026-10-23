@@ -5,7 +5,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;font-weight:300;line-height:1.6;}
+body{font-family:'Inter Variable',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;font-weight:300;line-height:1.6;}
 a{text-decoration:none;color:inherit;}
 h1,h2,h3{font-family:'Cormorant Upright',serif;font-weight:500;}
 h1 em,h2 em{font-style:italic;color:var(--red);}
