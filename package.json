@@ -1,17 +1,21 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "afrodita-studio-web",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && node scripts/export-static.mjs",
     "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "preview": "node scripts/serve-static.mjs",
+    "verify:site": "node scripts/verify-site.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=22.16.0"
   },
   "overrides": {
     "rolldown": "1.2.1"
