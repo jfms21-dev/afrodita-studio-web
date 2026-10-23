@@ -1,0 +1,1 @@
+export function exportStaticSite(sourceDirectory: string, destination?: string): Promise<void>;

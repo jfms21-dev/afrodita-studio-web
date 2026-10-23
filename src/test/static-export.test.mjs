@@ -1,0 +1,27 @@
+import { it, expect } from "vitest";
+import { mkdtemp, mkdir, writeFile, readFile, rm, stat } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { exportStaticSite } from "../../scripts/export-static.mjs";
+import { pages, images } from "../../scripts/site-manifest.mjs";
+
+it("exports all five pages and assets from the actual client directory without server artifacts", async () => {
+  const root = await mkdtemp(path.join(tmpdir(), "afrodita-export-"));
+  const source = path.join(root, "client");
+  const destination = path.join(root, "dist");
+  try {
+    for (const page of pages) {
+      const file = path.join(source, page.file);
+      await mkdir(path.dirname(file), { recursive: true });
+      await writeFile(file, `<html><title>${page.title}</title><body><img src="/maps_01.jpg"></body></html>`);
+    }
+    for (const image of images) await writeFile(path.join(source, image), "fixture");
+    await writeFile(path.join(source, "_worker.js"), "server-only");
+    await exportStaticSite(source, destination);
+    for (const page of pages) expect(await readFile(path.join(destination, page.file), "utf8")).toContain(page.title);
+    expect(await readFile(path.join(destination, "maps_01.jpg"), "utf8")).toBe("fixture");
+    await expect(stat(path.join(destination, "_worker.js"))).rejects.toMatchObject({ code: "ENOENT" });
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});

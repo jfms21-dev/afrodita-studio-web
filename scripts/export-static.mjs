@@ -1,8 +1,10 @@
 import { cp, readFile, rm, stat } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { images, localReferences, pages } from "./site-manifest.mjs";
 
-const source = path.resolve(".output/public");
+export async function exportStaticSite(sourceDirectory, destination = "dist") {
+const source = path.resolve(sourceDirectory);
 for (const page of pages) {
   const html = await readFile(path.join(source, page.file), "utf8");
   if (!html.includes(page.title) || !html.includes("<body")) {
@@ -19,10 +21,15 @@ for (const page of pages) {
 }
 for (const image of images) await stat(path.join(source, image));
 
-await rm("dist", { recursive: true, force: true });
-await cp(source, "dist", { recursive: true });
+await rm(destination, { recursive: true, force: true });
+await cp(source, destination, { recursive: true });
 // Never deploy the build-time SSR bundle or a generated Pages function.
 for (const entry of ["_worker.js", "_routes.json", "functions"]) {
-  await rm(path.join("dist", entry), { recursive: true, force: true });
+  await rm(path.join(destination, entry), { recursive: true, force: true });
 }
-console.log(`Static export ready: dist/ (${pages.length} pages, local photos and fonts).`);
+console.log(`Static export ready: ${destination}/ (${pages.length} pages, local photos and fonts).`);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  await exportStaticSite(process.argv[2] ?? ".output/public");
+}

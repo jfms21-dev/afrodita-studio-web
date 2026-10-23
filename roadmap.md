@@ -1,5 +1,6 @@
 # Independent hosting
 
+- [x] Fix direct Vite builds to export validated pages to dist; export regression test added and current checks pass.
 - [x] Replace platform-specific runtime/build dependencies with standalone static deployment.
 - [x] Keep required images and fonts inside the project; check routes and contact links.
 - [x] Document GitHub → Cloudflare Pages setup, local execution, production and contact limitations.

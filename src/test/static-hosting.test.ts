@@ -9,7 +9,7 @@ describe("Independent corporate hosting", () => {
     const pkg = JSON.parse(read("package.json"));
     expect(Object.keys({ ...pkg.dependencies, ...pkg.devDependencies }).filter((name) => name.startsWith("@lovable.dev/"))).toEqual([]);
     expect(read("vite.config.ts")).not.toContain("@lovable.dev/");
-    expect(pkg.scripts.build).toBe("vite build && node scripts/export-static.mjs");
+    expect(pkg.scripts.build).toBe("vite build");
   });
 
   it("keeps all five photographs in the project", () => {
