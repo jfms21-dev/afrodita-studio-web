@@ -34,7 +34,7 @@ export default defineConfig({
       buildApp: {
         order: "post",
         async handler(builder) {
-          const client = builder.environments.client;
+          const client = builder.environments['client'];
           if (!client) throw new Error("Static export requires the client build environment.");
           const { exportStaticSite } = await import("./scripts/export-static.mjs");
           await exportStaticSite(client.config.build.outDir);
