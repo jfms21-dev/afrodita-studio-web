@@ -4,8 +4,16 @@ import react from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vite";
+import { fileURLToPath } from "node:url";
+
+// Share one explicit location between Start's client/prerender and Nitro.
+// dist/ is exclusively the final static export, never an intermediate output.
+const staticPublicDirectory = fileURLToPath(new URL("./.output/public/", import.meta.url));
 
 export default defineConfig({
+  environments: {
+    client: { build: { outDir: staticPublicDirectory } },
+  },
   plugins: [
     tsconfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
@@ -26,7 +34,7 @@ export default defineConfig({
       },
     }),
     // Node is used only to render HTML during the build. Pages serves dist/ statically.
-    nitro({ preset: "node-server" }),
+    nitro({ preset: "node-server", output: { publicDir: staticPublicDirectory } }),
     react(),
     {
       name: "afrodita:export-static",

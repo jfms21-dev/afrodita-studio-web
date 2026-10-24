@@ -1,10 +1,12 @@
-import { cp, readFile, rm, stat } from "node:fs/promises";
+import { cp, mkdtemp, readFile, readdir, rename, rm, stat } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { images, localReferences, pages } from "./site-manifest.mjs";
 
 export async function exportStaticSite(sourceDirectory, destination = "dist") {
 const source = path.resolve(sourceDirectory);
+const target = path.resolve(destination);
+console.log(`Static export source: ${source}; entries: ${(await readdir(source)).join(", ")}`);
 for (const page of pages) {
   const html = await readFile(path.join(source, page.file), "utf8");
   if (!html.includes(page.title) || !html.includes("<body")) {
@@ -21,11 +23,19 @@ for (const page of pages) {
 }
 for (const image of images) await stat(path.join(source, image));
 
-await rm(destination, { recursive: true, force: true });
-await cp(source, destination, { recursive: true });
-// Never deploy the build-time SSR bundle or a generated Pages function.
-for (const entry of ["_worker.js", "_routes.json", "functions"]) {
-  await rm(path.join(destination, entry), { recursive: true, force: true });
+// Stage outside the target before replacing it: source may be dist/client.
+// Removing dist first in that layout destroys the source and causes ENOENT.
+const staging = await mkdtemp(path.join(path.dirname(target), ".afrodita-static-"));
+try {
+  await cp(source, staging, { recursive: true });
+  // Never deploy the build-time SSR bundle or a generated Pages function.
+  for (const entry of ["_worker.js", "_routes.json", "functions"]) {
+    await rm(path.join(staging, entry), { recursive: true, force: true });
+  }
+  await rm(target, { recursive: true, force: true });
+  await rename(staging, target);
+} finally {
+  await rm(staging, { recursive: true, force: true });
 }
 console.log(`Static export ready: ${destination}/ (${pages.length} pages, local photos and fonts).`);
 }
