@@ -25,6 +25,14 @@ bun run preview
 
 Abre http://localhost:4173. La generación prerenderiza las cinco páginas, valida los recursos locales y exporta `dist/`. Solo esa carpeta se publica: HTML, CSS, JavaScript, fotos y fuentes. El servidor generado en `.output/server` se usa durante la generación, **no se despliega ni se necesita en producción**.
 
+### Orden de compilación y exportación
+
+Vite 8 ejecuta la compilación de cliente y servidor temporal, Nitro prepara los recursos públicos, y TanStack prerenderiza las cinco rutas. El último `buildApp` del plugin `afrodita:export-static` valida y exporta los archivos después del prerenderizado.
+
+`vite.config.ts` fija la misma carpeta intermedia `.output/public/` para el cliente de TanStack y la salida pública de Nitro. `dist/` queda reservada exclusivamente para la publicación estática. El registro `Static export source:` muestra la ruta resuelta y sus archivos reales antes de validar; un origen inexistente o incompleto sigue haciendo fallar la compilación.
+
+El exportador primero valida HTML, fotografías y referencias locales; después copia a una carpeta temporal hermana de `dist/` y finalmente sustituye `dist/`. Esto evita el error `ENOENT ... dist/client`: si un origen estuviera dentro de `dist`, borrar `dist` antes de copiarlo también borraría ese origen. No se crean carpetas vacías para ocultar errores ni se desactivan validaciones.
+
 ```sh
 bun run verify:site -- http://localhost:4173
 ```
@@ -50,6 +58,8 @@ El comprobador solicita todas las páginas, fotos, estilos, JavaScript y fuentes
 5. Añade tu dominio en **Pages → tu proyecto → Custom domains** y sigue las instrucciones DNS. No necesitas publicar en Lovable.
 
 No configures Pages Functions, Workers, bases de datos ni secretos. Cada ruta tiene su propio `index.html`; no necesita una redirección global para simular páginas. Al añadir páginas actualiza `vite.config.ts` y `scripts/site-manifest.mjs`.
+
+Si Cloudflare ya instala dependencias automáticamente, puedes mantener `bun run build` como comando de compilación; las pruebas pueden ejecutarse por separado. No uses `dist/client` ni `.output/server` como directorio de publicación: utiliza únicamente `dist`.
 
 ## Comprobación después del despliegue
 
