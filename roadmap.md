@@ -1,9 +1,10 @@
 # Independent hosting
 
 ## Cloudflare export correction
-- [ ] Trace the installed build lifecycle and inspect recorded production output.
-- [ ] Export from the completed Nitro public directory while preserving all validation and five prerendered routes.
-- [ ] Add regression coverage, run available checks, and document Cloudflare configuration.
+- [x] Trace installed build lifecycle and resolve actual configuration: Nitro public output is .output/public, not dist/client; historical diagnostics inspected.
+- [x] Share an explicit intermediate public directory between Start and Nitro; stage validated export before replacing dist, preserving nested sources.
+- [x] Add regression coverage and document Cloudflare configuration; 11 tests pass, all five preview pages and local photographs load without page errors.
+- [ ] Inspect complete production artifacts: no production output or Cloudflare build log is available in this sandbox; preview build checks report OK but do not establish a full static build.
 - [ ] Verify actual Cloudflare deployment: waiting for its deployed URL.
 
 - [x] Fix direct Vite builds to export validated pages to dist; export regression test added and current checks pass.
