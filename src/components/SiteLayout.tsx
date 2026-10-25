@@ -9,11 +9,11 @@ export const MAPS_URL =
 function Logo({ light }: { light?: boolean }) {
   return (
     <Link to="/" className={light ? "logo light" : "logo"} aria-label="Afrodita Studio, inicio">
-      <span className="logo-mark">A</span>
-      <span className="logo-text">
-        <span className="script">Afrodita</span>
-        <small>studio</small>
-      </span>
+      {light ? (
+        <img src="/logo-full.png" alt="Afrodita Studio · Tu espacio, tu cuidado y tu esencia" width={700} height={461} style={{ width: 220, height: "auto" }} />
+      ) : (
+        <img src="/logo-header.png" alt="Afrodita Studio" width={600} height={194} style={{ height: 46, width: "auto" }} />
+      )}
     </Link>
   );
 }
