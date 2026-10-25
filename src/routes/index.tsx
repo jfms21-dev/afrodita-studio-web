@@ -16,8 +16,8 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="hero-text">
           <span className="eyebrow">Studio · Móstoles</span>
-          <h1>Por fin un sitio <em>que cuida cada detalle.</em></h1>
-          <p>Manicura rusa, uñas con diseños y pedicura spa en la calle de la Concordia. Evel, Karen y el equipo trabajan con mimo, todo estéril y limpio.</p>
+          <h1>Tu espacio de <em>cuidado y delicadeza.</em></h1>
+          <p>Especialistas en manicura rusa, pedicura spa y estilismo de uñas. Un rincón pensado para desconectar y regalarte el tiempo y el detalle que mereces.</p>
           <div className="hero-ctas">
             <Link to="/servicios" className="btn-outline">Descubre los servicios</Link>
             <a href={WA_URL} className="btn-solid" target="_blank" rel="noopener">Pide tu cita →</a>
