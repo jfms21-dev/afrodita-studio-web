@@ -1,5 +1,11 @@
 # Independent hosting
 
+## Requested image and catalog update
+- [ ] Replace header logo and hero photo, preserve footer logo and favicon.
+- [ ] Remove location outside explicit hero/footer contact information.
+- [ ] Rename manicure/pedicure categories and add lashes with complete prices and durations.
+- [ ] Verify catalog values, service dialogs, images and navigation; save requirements for continuation.
+
 ## Cloudflare export correction
 - [x] Trace installed build lifecycle and resolve actual configuration: Nitro public output is .output/public, not dist/client; historical diagnostics inspected.
 - [x] Share an explicit intermediate public directory between Start and Nitro; stage validated export before replacing dist, preserving nested sources.
