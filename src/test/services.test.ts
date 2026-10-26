@@ -205,7 +205,7 @@ const expected = [
   [
     "manos",
     "Decoración · Extras",
-    "Puntos y líneas manos",
+    "Puntos y líneas manos completas",
     30,
     3.0,
     false
@@ -221,8 +221,8 @@ const expected = [
   [
     "manos",
     "Decoración · Extras",
-    "Premium o doble francesa",
-    15,
+    "Premium por uña",
+    30,
     3.5,
     false
   ],
@@ -264,6 +264,14 @@ const expected = [
     "Ojo de gato",
     10,
     8.0,
+    false
+  ],
+  [
+    "manos",
+    "Decoración · Extras",
+    "Doble francesa",
+    15,
+    7.0,
     false
   ],
   [

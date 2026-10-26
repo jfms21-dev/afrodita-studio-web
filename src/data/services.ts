@@ -147,7 +147,7 @@ export const CATEGORIES: ServiceCategory[] = [
             "price": 2.5
           },
           {
-            "name": "Puntos y líneas manos",
+            "name": "Puntos y líneas manos completas",
             "minutes": 30,
             "price": 3.0
           },
@@ -157,8 +157,8 @@ export const CATEGORIES: ServiceCategory[] = [
             "price": 3.0
           },
           {
-            "name": "Premium o doble francesa",
-            "minutes": 15,
+            "name": "Premium por uña",
+            "minutes": 30,
             "price": 3.5
           },
           {
@@ -185,6 +185,11 @@ export const CATEGORIES: ServiceCategory[] = [
             "name": "Ojo de gato",
             "minutes": 10,
             "price": 8.0
+          },
+          {
+            "name": "Doble francesa",
+            "minutes": 15,
+            "price": 7.0
           },
           {
             "name": "Babyboomer/Aurora",
