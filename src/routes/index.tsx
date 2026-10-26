@@ -50,19 +50,6 @@ function Index() {
         </div>
       </section>
 
-      <section>
-        <div className="section-head">
-          <span className="eyebrow">Lo que ofrecemos</span>
-          <h2>Nuestras categorías</h2>
-          <p>Todo organizado por grupos, para que encuentres lo que buscas en segundos.</p>
-        </div>
-        <div className="cat-pills">
-          <Link to="/servicios" hash="manos" className="cat-pill">Manicura</Link>
-          <Link to="/servicios" hash="pies" className="cat-pill">Pedicura</Link>
-          <Link to="/servicios" hash="pestanas" className="cat-pill">Extensiones y lifting de pestañas</Link>
-        </div>
-      </section>
-
       <section className="gallery-wrap" id="galeria">
         <div className="section-head">
           <span className="eyebrow">Nuestros trabajos</span>
