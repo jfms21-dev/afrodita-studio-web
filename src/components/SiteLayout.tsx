@@ -66,13 +66,14 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
         <div className="footer-grid">
           <div className="footer-brand">
             <Logo light />
-            <p>Manicura rusa y pedicura en Móstoles.</p>
+            <p>Manicura rusa y pedicura.</p>
           </div>
           <div>
             <h4>Servicios</h4>
             <ul>
-              <li><Link to="/servicios" hash="manos">Manos</Link></li>
-              <li><Link to="/servicios" hash="pies">Pies</Link></li>
+              <li><Link to="/servicios" hash="manos">Manicura</Link></li>
+              <li><Link to="/servicios" hash="pies">Pedicura</Link></li>
+              <li><Link to="/servicios" hash="pestanas">Extensiones y lifting de pestañas</Link></li>
             </ul>
           </div>
           <div>
@@ -85,7 +86,7 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© Afrodita Studio · Móstoles</span>
+          <span>© Afrodita Studio</span>
           <span>
             <Link to="/aviso-legal">Aviso Legal</Link> &middot; <Link to="/politica-privacidad">Privacidad</Link> &middot;{" "}
             <Link to="/politica-cookies">Cookies</Link>

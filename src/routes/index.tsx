@@ -15,7 +15,7 @@ function Index() {
     <SiteLayout>
       <section className="hero" id="inicio">
         <div className="hero-text">
-          <span className="eyebrow">Studio · Móstoles</span>
+          <span className="eyebrow">Afrodita Studio</span>
           <h1>Tu espacio de <em>cuidado y delicadeza.</em></h1>
           <p>Especialistas en manicura rusa, pedicura spa y estilismo de uñas. Un rincón pensado para desconectar y regalarte el tiempo y el detalle que mereces.</p>
           <div className="hero-ctas">
@@ -27,7 +27,7 @@ function Index() {
             <span><strong>5,0</strong> · 26 reseñas en Google</span>
           </a>
         </div>
-        <div className="hero-img"><img src="/maps_06.jpg" alt="Salón de Afrodita Studio" style={{ objectPosition: "center 50%" }} /></div>
+        <div className="hero-img"><img src="/salon-hero.jpg" alt="Salón de Afrodita Studio con flores rosas suspendidas" /></div>
       </section>
 
       <section className="trust">
@@ -47,11 +47,12 @@ function Index() {
       <section className="worlds">
         <div className="section-head">
           <span className="eyebrow">Lo que más nos piden</span>
-          <h2>Manos <em>y pies</em></h2>
+          <h2>Manicura, pedicura <em>y pestañas</em></h2>
         </div>
         <div className="worlds-grid">
-          <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><span className="script">Manos</span><h3>Manicura</h3><p>Rusa, semipermanente y diseños.</p><span className="world-link">Ver manos →</span></div></Link>
-          <Link to="/servicios" hash="pies" className="world-card"><img src="/maps_08.jpg" alt="Pedicura spa" /><div className="world-text"><span className="script">Pies</span><h3>Pedicura spa</h3><p>Pies cuidados y bonitos.</p><span className="world-link">Ver pies →</span></div></Link>
+          <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><span className="script">Manicura</span><h3>Manicura</h3><p>Rusa, semipermanente y diseños.</p><span className="world-link">Ver manicura →</span></div></Link>
+          <Link to="/servicios" hash="pies" className="world-card"><img src="/maps_08.jpg" alt="Pedicura spa" /><div className="world-text"><span className="script">Pedicura</span><h3>Pedicura spa</h3><p>Pies cuidados y bonitos.</p><span className="world-link">Ver pedicura →</span></div></Link>
+          <Link to="/servicios" hash="pestanas" className="world-card"><img src="/pestanas-volumen.jpg" alt="Extensiones de pestañas con volumen" /><div className="world-text"><span className="script">Pestañas</span><h3>Extensiones y lifting de pestañas</h3><p>Extensiones, rellenos y lifting.</p><span className="world-link">Ver pestañas →</span></div></Link>
         </div>
       </section>
 
@@ -62,8 +63,9 @@ function Index() {
           <p>Todo organizado por grupos, para que encuentres lo que buscas en segundos.</p>
         </div>
         <div className="cat-pills">
-          <Link to="/servicios" hash="manos" className="cat-pill">Manos</Link>
-          <Link to="/servicios" hash="pies" className="cat-pill">Pies</Link>
+          <Link to="/servicios" hash="manos" className="cat-pill">Manicura</Link>
+          <Link to="/servicios" hash="pies" className="cat-pill">Pedicura</Link>
+          <Link to="/servicios" hash="pestanas" className="cat-pill">Extensiones y lifting de pestañas</Link>
         </div>
       </section>
 
