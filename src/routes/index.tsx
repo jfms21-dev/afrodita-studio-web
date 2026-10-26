@@ -34,20 +34,14 @@ function Index() {
         <div className="section-head">
           <span className="eyebrow">✦ Nuestra filosofía</span>
           <h2>Mimo <em>y profesionalidad</em></h2>
-          <p>Desde que entras el trato es increíble. Material estéril, un salón precioso y uñas que quedan justo como las querías.</p>
-        </div>
-        <div className="trust-grid">
-          <div className="trust-card"><span className="trust-ic">✦</span><h3>Manicura rusa</h3><p>Perfecta.</p></div>
-          <div className="trust-card"><span className="trust-ic">♥</span><h3>Pedicura spa</h3><p>Pies como nuevos.</p></div>
-          <div className="trust-card"><span className="trust-ic">❖</span><h3>Higiene</h3><p>Todo estéril.</p></div>
-          <div className="trust-card"><span className="trust-ic">★</span><h3>5,0 en Google</h3><p>26 reseñas.</p></div>
+          <p>Un equipo de profesionales tituladas que cuida de tus uñas y tu mirada como te mereces. Nos esforzamos al máximo en bioseguridad y trabajamos solo con productos de alta calidad, en un espacio de calma pensado para tu bienestar.</p>
         </div>
       </section>
 
       <section className="worlds">
         <div className="section-head">
-          <span className="eyebrow">Lo que más nos piden</span>
-          <h2>Manicura, pedicura <em>y pestañas</em></h2>
+          <span className="eyebrow">Lo que ofrecemos</span>
+          <h2>Nuestras <em>categorías</em></h2>
         </div>
         <div className="worlds-grid">
           <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><span className="script">Manicura</span><h3>Manicura</h3><p>Rusa, semipermanente y diseños.</p><span className="world-link">Ver manicura →</span></div></Link>
