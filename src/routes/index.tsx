@@ -63,7 +63,6 @@ function Index() {
           <figure><img src="/maps_01.jpg" alt="Lila en el estudio" loading="lazy" /></figure>
           <figure><img src="/maps_08.jpg" alt="Puesto de manicura" loading="lazy" /></figure>
         </div>
-        <div className="brands"><span>Afrodita</span><span>Móstoles</span><span>Studio</span></div>
       </section>
 
       <section className="reviews-wrap" id="opiniones">
