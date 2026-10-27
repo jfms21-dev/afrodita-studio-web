@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, WA_URL, MAPS_URL, seo } from "@/components/SiteLayout";
+import { useInView } from "@/hooks/use-in-view";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -35,6 +36,7 @@ function Index() {
           <span className="eyebrow">✦ Nuestra filosofía</span>
           <h2>Mimo <em>y profesionalidad</em></h2>
           <p>Cuidamos tus manos, tus pies y tu mirada: manicura, pedicura, extensiones de pestañas, especialistas en cejas y laminación coreana de cejas y pestañas. Todo con profesionales tituladas, máxima bioseguridad y productos de alta calidad, en un espacio de calma pensado para ti.</p>
+          <PhilosophyIcons />
           <p>Creemos en el poder de la pausa, ese momento de desconexión que todas merecemos. Por eso cuidamos cada detalle para que vivas una experiencia de confianza total y salgas sintiéndote tú, con tu belleza natural realzada.</p>
 
         </div>
@@ -107,5 +109,36 @@ function Index() {
         </div>
       </section>
     </SiteLayout>
+  );
+}
+
+function PhilosophyIcons() {
+  const { ref, inView } = useInView<HTMLDivElement>(0.35);
+  return (
+    <div className="philosophy-icons" ref={ref} data-in={inView ? "true" : "false"} aria-hidden="true">
+      <span className="phi-ic">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 4.5 32.5 9.4v10.2c0 7.6-5.4 12.7-12.5 15.9-7.1-3.2-12.5-8.3-12.5-15.9V9.4Z" />
+          <path d="m15 20 4 4 7.5-8.5" />
+        </svg>
+      </span>
+      <i className="phi-rule" />
+      <span className="phi-ic">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="16" y="4.5" width="8" height="7" rx="1.6" />
+          <path d="M17.5 11.5v3.5M22.5 11.5v3.5" />
+          <path d="M13 15h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2V17a2 2 0 0 1 2-2Z" />
+          <path d="M11 25c3 1.6 15 1.6 18 0" />
+        </svg>
+      </span>
+      <i className="phi-rule" />
+      <span className="phi-ic">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5.5 21.5C11 12.5 29 12.5 34.5 21.5 29 29.5 11 29.5 5.5 21.5Z" />
+          <circle cx="20" cy="21" r="3.4" />
+          <path d="M9.5 15.5 7.5 11.5M15.5 12.8 14.5 8.5M24.5 12.8 25.5 8.5M30.5 15.5 32.5 11.5" />
+        </svg>
+      </span>
+    </div>
   );
 }
