@@ -34,7 +34,9 @@ function Index() {
         <div className="section-head">
           <span className="eyebrow">✦ Nuestra filosofía</span>
           <h2>Mimo <em>y profesionalidad</em></h2>
-          <p>Un equipo de profesionales tituladas que cuida de tus uñas y tu mirada como te mereces. Nos esforzamos al máximo en bioseguridad y trabajamos solo con productos de alta calidad, en un espacio de calma pensado para tu bienestar.</p>
+          <p>Cuidamos tus manos, tus pies y tu mirada: manicura, pedicura, extensiones de pestañas, especialistas en cejas y laminación coreana de cejas y pestañas. Todo con profesionales tituladas, máxima bioseguridad y productos de alta calidad, en un espacio de calma pensado para ti.</p>
+          <p>Creemos en el poder de la pausa, ese momento de desconexión que todas merecemos. Por eso cuidamos cada detalle para que vivas una experiencia de confianza total y salgas sintiéndote tú, con tu belleza natural realzada.</p>
+
         </div>
       </section>
 
