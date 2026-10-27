@@ -44,9 +44,9 @@ function Index() {
           <h2>Nuestras <em>categorías</em></h2>
         </div>
         <div className="worlds-grid">
-          <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><span className="script">Manicura</span><h3>Manicura</h3><p>Rusa, semipermanente y diseños.</p><span className="world-link">Ver manicura →</span></div></Link>
-          <Link to="/servicios" hash="pies" className="world-card"><img src="/maps_08.jpg" alt="Pedicura spa" /><div className="world-text"><span className="script">Pedicura</span><h3>Pedicura spa</h3><p>Pies cuidados y bonitos.</p><span className="world-link">Ver pedicura →</span></div></Link>
-          <Link to="/servicios" hash="pestanas" className="world-card"><img src="/pestanas-volumen.jpg" alt="Extensiones de pestañas con volumen" /><div className="world-text"><span className="script">Pestañas</span><h3>Extensiones y lifting de pestañas</h3><p>Extensiones, rellenos y lifting.</p><span className="world-link">Ver pestañas →</span></div></Link>
+          <Link to="/servicios" hash="manos" className="world-card"><img src="/maps_09.jpg" alt="Manicura" /><div className="world-text"><h3>Manicura</h3><span className="world-link">Ver servicios →</span></div></Link>
+          <Link to="/servicios" hash="pies" className="world-card"><img src="/maps_08.jpg" alt="Pedicura" /><div className="world-text"><h3>Pedicura</h3><span className="world-link">Ver servicios →</span></div></Link>
+          <Link to="/servicios" hash="pestanas" className="world-card"><img src="/pestanas-volumen.jpg" alt="Extensiones de pestañas con volumen" /><div className="world-text"><h3>Extensiones y lifting de pestañas</h3><span className="world-link">Ver servicios →</span></div></Link>
         </div>
       </section>
 
