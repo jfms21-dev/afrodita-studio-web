@@ -16,7 +16,7 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="hero-text">
           <span className="eyebrow">Afrodita Studio</span>
-          <h1>Tu espacio de <em>cuidado y delicadeza.</em></h1>
+          <h1>Tu espacio, tu cuidado, <em>tu esencia.</em></h1>
           <p>Especialistas en manicura rusa, pedicura spa y estilismo de uñas. Un rincón pensado para desconectar y regalarte el tiempo y el detalle que mereces.</p>
           <div className="hero-ctas">
             <Link to="/servicios" className="btn-outline">Descubre los servicios</Link>
