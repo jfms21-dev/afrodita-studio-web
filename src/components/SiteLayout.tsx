@@ -67,7 +67,6 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
         <div className="footer-grid">
           <div className="footer-brand">
             <Logo light />
-            <p>Manicura rusa y pedicura.</p>
           </div>
           <div>
             <h4>Servicios</h4>
