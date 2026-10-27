@@ -77,6 +77,14 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
             </ul>
           </div>
           <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>📍 C. de la Concordia, 1</li>
+              <li>Móstoles, Madrid</li>
+              <li>📞 <a href="tel:+34682297159">682 29 71 59</a></li>
+            </ul>
+          </div>
+          <div>
             <h4>Síguenos</h4>
             <div className="footer-social">
               <a href={IG_URL} target="_blank" rel="noopener" aria-label="Instagram de Afrodita Studio">
@@ -85,14 +93,6 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
                 </svg>
               </a>
             </div>
-          </div>
-          <div>
-            <h4>Contacto</h4>
-            <ul>
-              <li>📍 C. de la Concordia, 1</li>
-              <li>Móstoles, Madrid</li>
-              <li>📞 <a href="tel:+34682297159">682 29 71 59</a></li>
-            </ul>
           </div>
         </div>
         <div className="footer-bottom">
