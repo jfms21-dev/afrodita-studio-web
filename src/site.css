@@ -65,6 +65,21 @@ section{padding:100px 7%;}
 .trust-card h3{font-size:1.15rem;color:var(--dark);margin-bottom:10px;}
 .trust-card p{font-size:.9rem;color:var(--muted);line-height:1.7;}
 
+/* FILOSOFÍA · iconos finos */
+.philosophy-icons{display:flex;align-items:center;justify-content:center;gap:20px;margin:34px 0 30px;color:var(--red);}
+.phi-ic{display:grid;place-items:center;opacity:0;transform:translateY(12px);transition:opacity .8s ease,transform .8s ease;}
+.philosophy-icons[data-in="true"] .phi-ic{opacity:1;transform:none;}
+.phi-ic:nth-of-type(2){transition-delay:.15s;}
+.phi-ic:nth-of-type(3){transition-delay:.3s;}
+.phi-ic svg{width:44px;height:44px;animation:phiFloat 7s ease-in-out infinite;}
+.phi-ic:nth-of-type(2) svg{animation-delay:1.1s;}
+.phi-ic:nth-of-type(3) svg{animation-delay:2.2s;}
+.phi-rule{width:52px;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.4;}
+@keyframes phiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion:reduce){.phi-ic{opacity:1;transform:none;transition:none}.phi-ic svg{animation:none}}
+@media (max-width:600px){.philosophy-icons{gap:12px}.phi-rule{width:26px}.phi-ic svg{width:36px;height:36px}}
+
+
 /* DOS MUNDOS */
 .worlds{background:var(--cream);}
 .worlds-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;max-width:1150px;margin:0 auto;}
