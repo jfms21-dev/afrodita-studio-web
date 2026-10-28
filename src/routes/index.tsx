@@ -118,19 +118,21 @@ function PhilosophyIcons() {
     <div className="philosophy-icons" ref={ref} data-in={inView ? "true" : "false"} aria-hidden="true">
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <ellipse cx="20" cy="18.5" rx="8" ry="10" />
-          <circle cx="16.9" cy="16.2" r=".85" fill="currentColor" stroke="none" />
-          <circle cx="23.1" cy="16.2" r=".85" fill="currentColor" stroke="none" />
-          <path style={{ fill: "var(--paper)" }} d="M12.6 20.4l5.6-1.9c1.2-.4 2.4-.4 3.6 0l5.6 1.9c.5 3.2-.9 6-3 7.7-1.5 1.2-2.9 1.8-4.4 1.8s-2.9-.6-4.4-1.8c-2.1-1.7-3.5-4.5-3-7.7Z" />
-          <path d="M12.6 20.2c-2-1-2.4-2.6-.3-3.8M27.4 20.2c2-1 2.4-2.6.3-3.8" />
-
-
-
-
-
-
-
+          <g transform="translate(0 2)">
+            <path d="M16.4 7.4C17 4.2 23 4.2 23.6 7.4" />
+            <path d="M17.4 6.4c1.5-1.3 3.7-1.3 5.2 0" />
+            <path d="M16.4 7.2C11.8 8.4 9.2 12 9.4 16.6M23.6 7.2C28.2 8.4 30.8 12 30.6 16.6" />
+            <path d="M21.6 8.8c-4.4-.4-8.8 1.8-11.2 4.8M21.6 8.8c3.2.6 6 2.4 8 4.8" />
+            <path d="M9.4 16.6c-.5 3.4.2 6 1.4 8.2M30.6 16.6c.5 3.4-.2 6-1.4 8.2" />
+            <path d="M10.8 16.9c.4 1.8 1 3.4 1.8 4.9M29.2 16.9c-.4 1.8-1 3.4-1.8 4.9" />
+            <path d="M14.2 15c1.3-.9 3.1-.9 4.4-.1M21.4 14.9c1.3-.8 3.1-.8 4.4.1" />
+            <path d="M14 17.4c1.2 1.2 3.2 1.2 4.4 0M21.6 17.4c1.2 1.2 3.2 1.2 4.4 0" />
+            <path d="M14.7 18l-.8 1.6M16.2 18.35l-.1 1.3M17.7 18l.8 1.6M22.3 18l.8 1.6M23.8 18.35l.1 1.3M25.3 18l.8 1.6" />
+            <path d="M12.6 21.8c2.1-1.4 4.2-1.4 7.4-1.4s5.3 0 7.4 1.4c.7 2.9.3 5.6-1.6 7.6-1.8 2-3.6 2.9-5.8 2.9s-4-.9-5.8-2.9c-1.9-2-2.3-4.7-1.6-7.6Z" />
+            <path d="M14.6 25c3.2 1.1 7.6 1.1 10.8 0M15.6 28.2c2.4.9 6.4.9 8.8 0" />
+          </g>
         </svg>
+
       </span>
       <i className="phi-rule" />
       <span className="phi-ic">
