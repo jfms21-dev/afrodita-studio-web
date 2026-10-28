@@ -118,13 +118,12 @@ function PhilosophyIcons() {
     <div className="philosophy-icons" ref={ref} data-in={inView ? "true" : "false"} aria-hidden="true">
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <ellipse cx="20" cy="19" rx="9" ry="10.5" />
-          <path style={{ fill: "var(--paper)" }} d="M11.3 16.5c1.2-3.6 3-5.6 5.2-5.6 1.6 0 2.4 1.2 3.5 1.2s1.9-1.2 3.5-1.2c2.2 0 4 2 5.2 5.6C29.6 8.6 25.4 5.4 20 5.4S10.4 8.6 11.3 16.5Z" />
-          <circle cx="16.6" cy="17.6" r=".9" fill="currentColor" stroke="none" />
-          <circle cx="23.4" cy="17.6" r=".9" fill="currentColor" stroke="none" />
-          <path style={{ fill: "var(--paper)" }} d="M12.2 21l6-2.1c1.2-.4 2.4-.4 3.6 0l6 2.1c.5 3.4-.9 6.4-3.1 8.2-1.6 1.3-3.1 1.9-4.7 1.9s-3.1-.6-4.7-1.9c-2.2-1.8-3.6-4.8-3.1-8.2Z" />
-          <path d="M13.4 24.2h13.2M15 27h10" />
-          <path d="M12.2 20.8 11.2 17.2M27.8 20.8 28.8 17.2" />
+          <ellipse cx="20" cy="18.5" rx="8" ry="10" />
+          <circle cx="16.9" cy="16.2" r=".85" fill="currentColor" stroke="none" />
+          <circle cx="23.1" cy="16.2" r=".85" fill="currentColor" stroke="none" />
+          <path style={{ fill: "var(--paper)" }} d="M12.6 20.4l5.6-1.9c1.2-.4 2.4-.4 3.6 0l5.6 1.9c.5 3.2-.9 6-3 7.7-1.5 1.2-2.9 1.8-4.4 1.8s-2.9-.6-4.4-1.8c-2.1-1.7-3.5-4.5-3-7.7Z" />
+          <path d="M12.6 20.2c-2-1-2.4-2.6-.3-3.8M27.4 20.2c2-1 2.4-2.6.3-3.8" />
+
 
 
 
