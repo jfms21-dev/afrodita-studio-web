@@ -118,8 +118,12 @@ function PhilosophyIcons() {
     <div className="philosophy-icons" ref={ref} data-in={inView ? "true" : "false"} aria-hidden="true">
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20 4.5 32.5 9.4v10.2c0 7.6-5.4 12.7-12.5 15.9-7.1-3.2-12.5-8.3-12.5-15.9V9.4Z" />
-          <path d="m15 20 4 4 7.5-8.5" />
+          <path d="M8.5 21.5C7.8 11.6 12.8 5 20 5s12.2 6.6 11.5 16.5" />
+          <path d="M8.7 20.6C8.3 26 7.5 30.5 6.1 34.6M31.3 20.6C31.7 26 32.5 30.5 33.9 34.6" />
+          <path d="M12 16.6C12 11.9 15.4 9 20 9s8 2.9 8 7.6c0 8-3.6 14.8-8 14.8s-8-6.8-8-14.8Z" />
+          <path d="M15.4 17.8c1.3-1.1 2.8-1.1 4.1 0M20.5 17.8c1.3-1.1 2.8-1.1 4.1 0" />
+          <path d="M17.6 24.8c1.5.9 3.3.9 4.8 0" />
+
         </svg>
       </span>
       <i className="phi-rule" />
@@ -134,9 +138,10 @@ function PhilosophyIcons() {
       <i className="phi-rule" />
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5.5 21.5C11 12.5 29 12.5 34.5 21.5 29 29.5 11 29.5 5.5 21.5Z" />
-          <circle cx="20" cy="21" r="3.4" />
-          <path d="M9.5 15.5 7.5 11.5M15.5 12.8 14.5 8.5M24.5 12.8 25.5 8.5M30.5 15.5 32.5 11.5" />
+          <path d="M9.5 14.6C13 11.8 23 11.6 27 14" />
+          <path d="M8.5 19.5C12 25 28 25 31.5 19.5" />
+          <path d="M13.1 22.6 10.4 26M16.4 23.4 15 27.6M20 23.6 20 28.4M23.6 23.4 25 27.6M26.9 22.6 29.6 26" />
+
         </svg>
       </span>
     </div>
