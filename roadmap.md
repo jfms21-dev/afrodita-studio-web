@@ -22,5 +22,6 @@
 
 ## Philosophy section divider icons
 - [x] Add a fine-line animated row between the two philosophy paragraphs (bioseguridad, uñas, pestañas).
-- [ ] Redraw the first icon as a minimalist rostro con mascarilla higiénica; keep the same thin line and float effect.
-- [ ] Confirm the row reads clearly at desktop and mobile size, with tests and build still green.
+- [x] Redraw the first icon as a minimalist rostro con mascarilla higiénica; keep the same thin line and float effect.
+- [x] Confirm the row reads clearly at desktop and mobile size, with tests and build still green.
+
