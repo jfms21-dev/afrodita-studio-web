@@ -19,3 +19,9 @@
 - [x] Document GitHub → Cloudflare Pages setup, local execution, production and contact limitations.
 - [x] Run existing tests and verify the website locally (8 tests; five pages, photos, fonts, service dialogs and mobile menu).
 - [ ] Verify actual Cloudflare deployment and custom domain: waiting for the owner to connect GitHub in Cloudflare Pages and provide its deployed URL.
+
+## Philosophy section divider icons
+- [x] Add a fine-line animated row between the two philosophy paragraphs (bioseguridad, uñas, pestañas).
+- [x] Redraw the first icon as a minimalist rostro con mascarilla higiénica; keep the same thin line and float effect.
+- [x] Confirm the row reads clearly at desktop and mobile size, with tests and build still green.
+
