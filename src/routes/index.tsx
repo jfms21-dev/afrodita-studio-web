@@ -118,8 +118,14 @@ function PhilosophyIcons() {
     <div className="philosophy-icons" ref={ref} data-in={inView ? "true" : "false"} aria-hidden="true">
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20 4.5 32.5 9.4v10.2c0 7.6-5.4 12.7-12.5 15.9-7.1-3.2-12.5-8.3-12.5-15.9V9.4Z" />
-          <path d="m15 20 4 4 7.5-8.5" />
+          <path d="M7.5 22C6.8 11.8 12.2 4.5 20 4.5S33.2 11.8 32.5 22" />
+          <path d="M7.7 21.2C7.2 27 6.3 31.6 4.8 35.5M32.3 21.2C32.8 27 33.7 31.6 35.2 35.5" />
+          <path d="M11.6 17C11.6 11.7 15.2 8.8 20 8.8s8.4 2.9 8.4 8.2c0 8.3-3.8 15.6-8.4 15.6s-8.4-7.3-8.4-15.6Z" />
+          <path d="M13.6 16.6c0-3.9 2.9-5.9 6.4-5.9s6.4 2 6.4 5.9c0 7.2-2.9 13.4-6.4 13.4s-6.4-6.2-6.4-13.4Z" />
+          <path d="M15.3 17.1c1.2-1.3 2.9-1.3 4 0-1.1 1.2-2.8 1.2-4 0ZM20.7 17.1c1.1-1.3 2.8-1.3 4 0-1.2 1.2-2.9 1.2-4 0Z" />
+          <path d="M17.7 24.4c1.3-.9 2.9-.9 4.2 0-1.3.9-2.9.9-4.2 0Z" />
+
+
         </svg>
       </span>
       <i className="phi-rule" />
@@ -134,9 +140,10 @@ function PhilosophyIcons() {
       <i className="phi-rule" />
       <span className="phi-ic">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5.5 21.5C11 12.5 29 12.5 34.5 21.5 29 29.5 11 29.5 5.5 21.5Z" />
-          <circle cx="20" cy="21" r="3.4" />
-          <path d="M9.5 15.5 7.5 11.5M15.5 12.8 14.5 8.5M24.5 12.8 25.5 8.5M30.5 15.5 32.5 11.5" />
+          <path d="M9.5 14.6C13 11.8 23 11.6 27 14" />
+          <path d="M8.5 19.5C12 25 28 25 31.5 19.5" />
+          <path d="M13.1 22.6 10.4 26M16.4 23.4 15 27.6M20 23.6 20 28.4M23.6 23.4 25 27.6M26.9 22.6 29.6 26" />
+
         </svg>
       </span>
     </div>
