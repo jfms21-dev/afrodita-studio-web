@@ -267,8 +267,8 @@ footer a:hover{color:var(--gold);}
 .brands{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px;}
 .brands span{border:1px solid var(--line);border-radius:30px;padding:8px 18px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);background:var(--paper);}
 /* FILOSOFÍA · ilustración */
-.phi-illu{width:150px;height:auto;display:block}
-@media (max-width:600px){.phi-illu{width:120px}}
+.phi-illu{width:105px;height:auto;display:block}
+@media (max-width:600px){.phi-illu{width:84px}}
 /* GALERÍA */
 .gallery-more{text-align:center;margin-top:28px}
 .gallery-page{padding-top:120px}

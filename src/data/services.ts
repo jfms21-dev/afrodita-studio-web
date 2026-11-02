@@ -6,7 +6,7 @@ export const CATEGORIES: ServiceCategory[] = [
   {
     "id": "manos",
     "title": "Manicura",
-    "img": "/maps_09.jpg",
+    "img": "/manicura-card.jpg",
     "groups": [
       {
         "title": "Manicura",
@@ -208,7 +208,7 @@ export const CATEGORIES: ServiceCategory[] = [
   {
     "id": "pies",
     "title": "Pedicura",
-    "img": "/maps_08.jpg",
+    "img": "/pedicura-card.jpg",
     "groups": [
       {
         "title": "Pedicura",
