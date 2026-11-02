@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
   head: () =>
     seo(
       "Afrodita Studio — Manicura rusa y pedicura en Móstoles",
-      "Afrodita Studio, en C. de la Concordia 1, Móstoles. Manicura rusa, uñas con diseños y pedicura spa. 5,0★ con 26 reseñas en Google.",
+      "Afrodita Studio, en C. de la Concordia 1, Móstoles. Manicura rusa, uñas con diseños y pedicura spa. 5,0★ con 27 reseñas en Google.",
     ),
   component: Index,
 });
@@ -25,7 +25,7 @@ function Index() {
           </div>
           <a className="hero-rating" href={MAPS_URL} target="_blank" rel="noopener">
             <span className="stars">★★★★★</span>
-            <span><strong>5,0</strong> · 26 reseñas en Google</span>
+            <span><strong>5,0</strong> · 27 reseñas en Google</span>
           </a>
         </div>
         <div className="hero-img"><img src="/salon-hero.jpg" alt="Salón de Afrodita Studio con flores rosas suspendidas" /></div>
@@ -61,11 +61,11 @@ function Index() {
           <p>Te esperamos en la calle de la Concordia, 1, local K, en Móstoles.</p>
         </div>
         <div className="gallery">
-          <figure className="big"><img src="/maps_06.jpg" alt="Nuestro salón" loading="lazy" /></figure>
-          <figure><img src="/maps_09.jpg" alt="Almendra nude" loading="lazy" /></figure>
-          <figure><img src="/maps_07.jpg" alt="Rosa con lunares" loading="lazy" /></figure>
-          <figure><img src="/maps_01.jpg" alt="Lila en el estudio" loading="lazy" /></figure>
-          <figure><img src="/maps_08.jpg" alt="Puesto de manicura" loading="lazy" /></figure>
+          <figure className="big"><img src="/galeria/manicura-1.jpg" alt="Manicura artística" loading="lazy" /></figure>
+          <figure><img src="/galeria/pedicura-1.jpg" alt="Pedicura" loading="lazy" /></figure>
+          <figure><img src="/galeria/lifting-coreano-1.jpg" alt="Lifting coreano de pestañas" loading="lazy" /></figure>
+          <figure><img src="/galeria/laminado-cejas-1.jpg" alt="Laminado de cejas" loading="lazy" /></figure>
+          <figure><img src="/galeria/manicura-7.jpg" alt="Manicura con diseño" loading="lazy" /></figure>
         </div>
         <div className="gallery-more"><Link to="/galeria" className="world-link">Ver galería →</Link></div>
       </section>
@@ -74,7 +74,7 @@ function Index() {
         <div className="section-head">
           <span className="eyebrow">Reseñas Google</span>
           <h2>Lo que dicen <em>nuestras clientas</em></h2>
-          <p>5,0 de 5 estrellas · 26 reseñas</p>
+          <p>5,0 de 5 estrellas · 27 reseñas</p>
         </div>
         <div className="review-grid">
           <div className="review-card"><div className="stars">★★★★★</div><p>"Por fin un sitio de uñas donde cuidan cada detalle. Desde que entras el trato es increíble y se nota muchísimo el mimo y la profesionalidad. Me han dejado las uñas preciosas."</p><cite>Mar C.</cite></div>
