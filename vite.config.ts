@@ -22,6 +22,7 @@ export default defineConfig({
       pages: [
         { path: "/" },
         { path: "/servicios" },
+        { path: "/galeria" },
         { path: "/aviso-legal" },
         { path: "/politica-privacidad" },
         { path: "/politica-cookies" },
