@@ -266,3 +266,12 @@ footer a:hover{color:var(--gold);}
 .logo-mark{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Cormorant Upright',serif;font-size:1.4rem;box-shadow:0 0 0 3px var(--tint);}
 .brands{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px;}
 .brands span{border:1px solid var(--line);border-radius:30px;padding:8px 18px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);background:var(--paper);}
+/* FILOSOFÍA · ilustración */
+.phi-illu{width:150px;height:auto;display:block}
+@media (max-width:600px){.phi-illu{width:120px}}
+/* GALERÍA */
+.gallery-more{text-align:center;margin-top:28px}
+.gallery-page{padding-top:120px}
+.gallery-full{columns:3 260px;column-gap:14px;max-width:1200px;margin:0 auto}
+.gallery-full figure{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden}
+.gallery-full img{width:100%;display:block}
