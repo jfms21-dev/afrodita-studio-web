@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, WA_URL, MAPS_URL, seo } from "@/components/SiteLayout";
+import { HOME_GALLERY } from "@/data/home-gallery";
 import { useInView } from "@/hooks/use-in-view";
 
 export const Route = createFileRoute("/")({
@@ -61,11 +62,11 @@ function Index() {
           <p>Te esperamos en la calle de la Concordia, 1, local K, en Móstoles.</p>
         </div>
         <div className="gallery">
-          <figure className="big"><img src="/galeria/manicura-1.jpg" alt="Manicura artística" loading="lazy" /></figure>
-          <figure><img src="/galeria/pedicura-1.jpg" alt="Pedicura" loading="lazy" /></figure>
-          <figure><img src="/galeria/manicura-4.jpg" alt="Manicura con acabado limpio" loading="lazy" /></figure>
-          <figure><img src="/galeria/manicura-8.jpg" alt="Manicura en tonos neutros" loading="lazy" /></figure>
-          <figure><img src="/galeria/manicura-7.jpg" alt="Manicura con diseño" loading="lazy" /></figure>
+          {HOME_GALLERY.map((photo) => (
+            <figure key={photo.src} className={photo.big ? "big" : undefined}>
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
+            </figure>
+          ))}
         </div>
         <div className="gallery-more"><Link to="/galeria" className="world-link">Ver galería →</Link></div>
       </section>
