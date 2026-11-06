@@ -63,8 +63,8 @@ function Index() {
         <div className="gallery">
           <figure className="big"><img src="/galeria/manicura-1.jpg" alt="Manicura artística" loading="lazy" /></figure>
           <figure><img src="/galeria/pedicura-1.jpg" alt="Pedicura" loading="lazy" /></figure>
-          <figure><img src="/galeria/lifting-coreano-1.jpg" alt="Lifting coreano de pestañas" loading="lazy" /></figure>
-          <figure><img src="/galeria/laminado-cejas-1.jpg" alt="Laminado de cejas" loading="lazy" /></figure>
+          <figure><img src="/galeria/manicura-4.jpg" alt="Manicura con acabado limpio" loading="lazy" /></figure>
+          <figure><img src="/galeria/manicura-8.jpg" alt="Manicura en tonos neutros" loading="lazy" /></figure>
           <figure><img src="/galeria/manicura-7.jpg" alt="Manicura con diseño" loading="lazy" /></figure>
         </div>
         <div className="gallery-more"><Link to="/galeria" className="world-link">Ver galería →</Link></div>
