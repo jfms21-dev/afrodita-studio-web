@@ -25,3 +25,8 @@
 - [x] Redraw the first icon as a minimalist rostro con mascarilla higiénica; keep the same thin line and float effect.
 - [x] Confirm the row reads clearly at desktop and mobile size, with tests and build still green.
 
+## Homepage gallery photos and menu link
+- [x] Fix "Nuestros trabajos" to the agreed five photos without faces and without repeating category covers (`src/data/home-gallery.ts`).
+- [x] Point the header "Galería" item to the /galeria page instead of the homepage anchor.
+- [x] Add regression coverage (79 tests) and check both in the preview: five face-free photos on the homepage, menu click lands on /galeria with its 32 photos.
+
