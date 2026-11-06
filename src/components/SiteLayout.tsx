@@ -53,7 +53,7 @@ export function SiteLayout({ children, alwaysScrolled }: { children: ReactNode; 
           <ul>
             <li><a href="/#inicio" onClick={close}>Inicio</a></li>
             <li><Link to="/servicios" onClick={close}>Servicios</Link></li>
-            <li><a href="/#galeria" onClick={close}>Galería</a></li>
+            <li><Link to="/galeria" onClick={close}>Galería</Link></li>
             <li><a href="/#opiniones" onClick={close}>Opiniones</a></li>
             <li><a href="/#contacto" onClick={close}>Contacto</a></li>
           </ul>
