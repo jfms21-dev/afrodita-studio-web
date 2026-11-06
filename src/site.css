@@ -275,6 +275,9 @@ footer a:hover{color:var(--gold);}
 .gallery-full{columns:3 260px;column-gap:14px;max-width:1200px;margin:0 auto}
 .gallery-full figure{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden}
 .gallery-full img{width:100%;display:block}
+.gallery-full button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+@media(max-width:600px){.gallery-full{columns:2;column-gap:8px}.gallery-full figure{margin-bottom:8px;border-radius:10px}}
+.lightbox-close{position:absolute;top:16px;right:22px;background:none;border:0;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1}
 
 /* Servicios: secciones visibles bajo la cabecera fija y modal con 4 esquinas redondeadas */
 html{scroll-padding-top:110px;}
